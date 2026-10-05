@@ -1,0 +1,34 @@
+appId: com.owaismunawar.tandem
+name: Lists, tick, delete with undo, quick add
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible:
+      id: lists-screen
+    timeout: 20000
+- assertVisible: 'The Okafor-Lindqvist flat'
+- assertVisible: 'Fruit & veg'
+- tapOn:
+    id: toggle-g1
+- assertVisible: '11 to go · 3 done'
+- swipe:
+    from:
+      id: item-g2
+    direction: LEFT
+- assertVisible: 'Deleted “Spinach”'
+- tapOn:
+    id: toast-action
+- assertVisible: 'Spinach'
+- tapOn:
+    id: quick-add-button
+- inputText:
+    id: quick-add-input
+    text: 'milk, eggs and pay rent Friday, Sam does dishes daily'
+- tapOn:
+    id: quick-add-preview
+- assertVisible: '4 to add'
+- assertVisible: 'Parsed on this phone'
+- tapOn:
+    id: quick-add-confirm
+- assertVisible: 'Added 3 items and 1 chore'

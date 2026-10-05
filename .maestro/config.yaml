@@ -1,0 +1,6 @@
+# Flows run against a demo build (EXPO_PUBLIC_DEMO=1), which seeds the
+# fictional household and needs no sync server.
+flows:
+  - '*.yaml'
+excludeFilters:
+  - config.yaml

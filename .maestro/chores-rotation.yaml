@@ -1,0 +1,20 @@
+appId: com.owaismunawar.tandem
+name: Completing a rotating chore hands it on
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible:
+      id: lists-screen
+    timeout: 20000
+- tapOn: 'Chores'
+- assertVisible: 'Overdue'
+- assertVisible: 'Take out the bins'
+- tapOn:
+    id: complete-c1
+- assertVisible: 'Dishes done · Linnea is next'
+- assertVisible: 'Done today by Ngozi'
+- tapOn: 'Home'
+- assertVisible:
+    id: members-card
+- assertVisible: 'None, local only'
