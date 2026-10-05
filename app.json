@@ -1,0 +1,94 @@
+{
+  "expo": {
+    "name": "Tandem",
+    "slug": "tandem",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "tandem",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.owaismunawar.tandem",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.owaismunawar.tandem",
+      "adaptiveIcon": {
+        "backgroundColor": "#123B33",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_PHONE_STATE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F5F3EC",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 96,
+          "dark": {
+            "backgroundColor": "#0F1A17",
+            "image": "./assets/images/splash-icon.png"
+          }
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Tandem uses the camera to scan a household invite code.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": true
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#1F7A63"
+        }
+      ],
+      [
+        "expo-widgets",
+        {
+          "widgets": [
+            {
+              "name": "TodayChores",
+              "displayName": "Today's chores",
+              "description": "Who is doing what in your household today.",
+              "ios": {
+                "supportedFamilies": ["systemSmall", "systemMedium"]
+              }
+            }
+          ]
+        }
+      ],
+      "expo-localization",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "17.0"
+          },
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

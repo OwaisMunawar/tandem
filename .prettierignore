@@ -1,0 +1,10 @@
+node_modules
+coverage
+ios
+android
+.expo
+dist
+server/dist
+server/data
+package-lock.json
+docs/screenshots

@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+ios
+android
+.expo
+coverage
+docs
+server/dist
+server/data
+.git

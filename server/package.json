@@ -1,0 +1,27 @@
+{
+  "name": "@tandem/server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-hostable TinyBase sync server for Tandem households, with an optional LLM quick-add endpoint.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "ai": "7.0.127",
+    "tinybase": "10.0.1",
+    "ws": "8.22.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15"
+  }
+}
