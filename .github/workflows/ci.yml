@@ -49,7 +49,7 @@ jobs:
       - name: Smoke test
         run: |
           docker run -d --name sync -p 8043:8043 tandem-sync
-          for i in $(seq 1 20); do curl -fsS http://localhost:8043/health && exit 0; sleep 1; done
+          for _ in $(seq 1 20); do curl -fsS http://localhost:8043/health && exit 0; sleep 1; done
           docker logs sync
           exit 1
 
