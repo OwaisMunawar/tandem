@@ -13,6 +13,9 @@ updates:
       - dependency-name: 'react-dom'
       - dependency-name: 'react-native'
       - dependency-name: 'react-native-*'
+      # 10.1 declares an optional peer on Expo SDK 58, which fails to resolve on SDK 57.
+      - dependency-name: 'tinybase'
+        update-types: ['version-update:semver-minor']
       # Major upgrades are reviewed by hand.
       - dependency-name: '*'
         update-types: ['version-update:semver-major']
