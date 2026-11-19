@@ -9,6 +9,7 @@ const esmPackages = [
   '@workflow',
   'eventsource-parser',
   '@standard-schema',
+  'zod',
 ];
 
 /** @type {import('jest').Config} */
